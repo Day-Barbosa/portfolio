@@ -63,8 +63,14 @@ getAboutGithub();
 async function getProjectsGithub() {
     try {
 
-        const resposta = await fetch('https://api.github.com/users/Day-Barbosa/repos?sort=updated&per_page=6');
-        const repositorios = await resposta.json();
+        const resposta = await fetch('https://api.github.com/users/Day-Barbosa/repos?sort=pushed&per_page=100');
+        const todos = await resposta.json();
+
+        // Mostra só projetos próprios e ativos: sem forks, arquivados, o README do perfil e este portfólio
+        const ignorados = ['Day-Barbosa', 'portfolio'];
+        const repositorios = todos
+            .filter(repo => !repo.fork && !repo.archived && !ignorados.includes(repo.name))
+            .slice(0, 6);
 
         swiperWrapper.innerHTML = '';
 
@@ -72,17 +78,9 @@ async function getProjectsGithub() {
         const linguagens = {
             'JavaScript': 'javascript',
             'TypeScript': 'typescript',
-            'Python': 'python',
             'Java': 'java',
             'HTML': 'html',
             'CSS': 'css',
-            'PHP': 'php',
-            'C#': 'csharp',
-            'Go': 'go',
-            'Kotlin': 'kotlin',
-            'Swift': 'swift',
-            'C': 'c',
-            'C++': 'c_plus',
             'GitHub': 'github',
         }
 
