@@ -1,5 +1,7 @@
 # Projeto Portfólio Pessoal
 
+**[🌐 Acessar o portfólio](https://day-barbosa.github.io/portfolio/)**
+
 ---
 
 <div align="center"> 
@@ -25,7 +27,7 @@ O projeto consome dados dinâmicos da **API do GitHub**, permitindo que informa�
   - Layout responsivo (desktop, tablet e mobile)
 - Integração com a **API do GitHub** para:
   - Exibição dinâmica das informações do perfil
-  - Listagem automática dos repositórios
+  - Listagem automática dos 6 repositórios atualizados mais recentemente (sem forks e arquivados)
 - Exibição dos projetos em **carrossel interativo** utilizando **Swiper.js**
 - **Formulário de contato com validação no frontend**, garantindo o correto preenchimento dos campos
 - Página dedicada de **confirmação de envio** do formulário
@@ -44,11 +46,12 @@ portfolio/
 │
 ├── assets/
 │   ├── css/
-│   │   └── styles.css    # Estilos e responsividade
+│   │   └── style.css     # Estilos e responsividade
 │   ├── js/
-│   │   └── scripts.js   # Integração com GitHub, carrossel e validações
-│   ├── img/             # Imagens e ilustrações
-│   └── icons/           # Ícones das linguagens e redes sociais
+│   │   └── script.js     # Integração com GitHub, carrossel e validações
+│   ├── img/              # Imagens e ilustrações
+│   ├── languages/        # Ícones das linguagens (usados no carrossel)
+│   └── social/           # Ícones das redes sociais
 │
 └── README.md
 ```
@@ -61,7 +64,7 @@ portfolio/
 - **CSS3**: Estilização, layout responsivo e animações
 - **JavaScript (ES6+)**: Interatividade, consumo de APIs e validações
 - **Swiper.js**: Carrossel de projetos responsivo
-- **Fom Submit:** Serviço de envio de e-mails via formulário HTML
+- **FormSubmit:** Serviço de envio de e-mails via formulário HTML
 - **GitHub API**: Fonte dinâmica de dados do perfil e repositórios
 
 ------
@@ -80,13 +83,13 @@ Para executar o projeto em ambiente local, siga os passos abaixo.
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/Day-Barbosa/Portifolio.git
+   git clone https://github.com/Day-Barbosa/portfolio.git
    ```
 
 2. Acesse a pasta do projeto:
 
    ```bash
-   cd seu-repositorio
+   cd portfolio
    ```
 
 3. Abra o projeto no Visual Studio Code:
@@ -105,9 +108,16 @@ O site será aberto no navegador e todas as alterações poderão ser visualizad
 
 Este site está disponível publicamente através do **GitHub Pages**. Você pode acessar a versão online pelo link abaixo:
 
-🔗 https://github.com/Day-Barbosa/Portifolio.git
+🔗 https://day-barbosa.github.io/portfolio/
+
 ------
 
 ## Contribuições
 
 Contribuições são bem-vindas. Caso tenha sugestões de melhorias, correções ou novas funcionalidades, sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**.
+
+------
+
+## Licença
+
+Distribuído sob a licença MIT. Veja [`LICENSE`](LICENSE).
